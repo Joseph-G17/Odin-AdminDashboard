@@ -1,7 +1,20 @@
+@font-face {
+    font-family: 'robotoregular';
+    src: url('roboto-variablefont_wdthwght-webfont.woff2') format('woff2'),
+         url('roboto-variablefont_wdthwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: "robotoregular", Arial;
+}
+
 html, body {
     margin: 0;
     padding: 0;   
 }
+
 
 .container{
     display: grid;
@@ -127,9 +140,21 @@ aside {
 }
 
 .side-header {
-    display: grid;
+    display: inline-flex;
     justify-content: center;
+    flex-wrap: nowrap;
+}
 
+.side-header img {
+   margin-right: 3%;
+   padding-top: 4px;
+   filter: hue-rotate(180deg); /*for images change to white*/
+}
+
+.side-header h2 {
+    margin: 0;
+    padding-top: 10px;
+    color: white;
 }
 
 .side-button-A{
@@ -144,7 +169,20 @@ aside {
     background: none;
     border: none;
     cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;  
+    padding: 10%;
+    
 }
+.side-button img {
+    width: 26px;
+    height: 26px;
+    padding-right: 18px;
+}
+
 .projects {
     grid-column: 2/3;
     grid-row: 2/4;
