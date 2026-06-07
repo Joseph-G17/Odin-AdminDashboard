@@ -18,8 +18,8 @@ html, body {
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 5fr 1.7fr;
+    grid-template-rows: 0.8fr 2fr 2fr;
     background-color: rgb(221, 221, 221);
     min-height: 100vh;
 }
@@ -29,6 +29,8 @@ header {
     display: grid;
     grid-template-columns: 2fr 1fr;
     background-color: white;
+    box-shadow: 0px -5px 10px grey;
+    clip-path: inset(0px 0px -10px 0px )
 }
 
 .search-bar {
@@ -64,6 +66,8 @@ header {
     align-items: center;
     justify-content: right;
     padding-top: 10px;
+    padding-right: 10px;
+    column-gap: 40px;
 }
 
 .header-options-B {
@@ -86,9 +90,10 @@ header {
 .nav-button {
     border: none;
     background: rgb(79, 150, 216);
-    border-radius: 15px;
+    border-radius: 30px;
     height: 45px;
     column-gap: 60px;
+    color: white;
 }
 
 .notifications {
@@ -134,9 +139,10 @@ header {
 
 aside {
     grid-row: 1/4;
-    background-color: lightblue;
+    background-color: rgb(42, 130, 180);
     display: grid;
     grid-template-rows: 0.5fr 2fr 4fr;
+    padding: 0 10px 0px;
 }
 
 .side-header {
@@ -148,7 +154,7 @@ aside {
 .side-header img {
    margin-right: 3%;
    padding-top: 4px;
-   filter: hue-rotate(180deg); /*for images change to white*/
+   filter: brightness(0) invert(1) 
 }
 
 .side-header h2 {
@@ -181,20 +187,22 @@ aside {
     width: 26px;
     height: 26px;
     padding-right: 18px;
+    filter: brightness(0) invert(1);
 }
 
 .projects {
     grid-column: 2/3;
     grid-row: 2/4;
     display: grid;
-    grid-template-rows: 0.1fr 4fr;
+    grid-template-rows: 0.1fr 4fr;  
 }
 .projects-header {
-
+    margin-top: 20px;
+    margin-left: 20px;
 }
 .projects-cards{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(250px, 650px));
     grid-template-rows: 1fr 1fr 1fr;
     gap: 30px;
     padding: 10px;
@@ -203,15 +211,51 @@ aside {
     background-color: white;
     border-left: 10px solid orange;   
     border-radius: 10px;
+    padding: 25px;
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
 }
-.anouncements {
-    grid-column: 3/4;
-    grid-row: 2/3;
+
+.card > div {
+    justify-self: right;
+}
+.announcements {
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+}
+
+.announcement-header {
+    margin-top: 20px;
+}
+
+.announcement-cards {
+    background-color: white;
+    display: grid;
+    border-radius: 10px;
+    margin: 0px 40px 20px 0;
+}
+
+.announcement-card {
+    padding: 10px 0 0 10px;
 }
 
 .trending {
-    grid-column: 3/4;
-    grid-row: 3/4;
+    display: grid;
+    grid-template-rows: 1fr 14fr;
+}
+
+.trending-header {
+    margin-top: 5px;
+}
+
+.trending-cards {
+    background: white;
+    margin: 10px 40px 10px 0;
+    border-radius: 10px;
+}
+
+.trending-card {
+    padding: 10px 0 0 20px;
 }
 
 p {
